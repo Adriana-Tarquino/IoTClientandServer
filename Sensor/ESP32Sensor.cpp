@@ -14,11 +14,11 @@ void ESP32Sensor::begin() {
 // Leer la humedad y enviar el estado
 void ESP32Sensor::update() {
     // Leer humedad
-    int humedad = moistureSensor.readMoisture();
+    int humidity = moistureSensor.readMoisture();
     
     // Obtener estado según la humedad
-    int estado = moistureSensor.getState(humedad);
+    int state = moistureSensor.getState(humidity);
 
     // Enviar estado al servidor
-    clientSensor.sendHumidityState(estado);
+    clientSensor.sendHumidityState(state);
 }

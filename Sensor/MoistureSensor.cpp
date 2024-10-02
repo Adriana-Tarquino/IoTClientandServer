@@ -14,11 +14,11 @@ void MoistureSensor::begin() {
 // Leer el porcentaje de humedad
 int MoistureSensor::readMoisture() {
     int valorHumedad = analogRead(pin);  
-    int porcentajeHumedad = map(valorHumedad, 0, 4095, 100, 0);  // Convertir a porcentaje
+    int percentageHumidity = map(valorHumedad, 0, 4095, 100, 0);  // Convertir a porcentaje
     Serial.print("Humedad del suelo: ");
-    Serial.print(porcentajeHumedad);
+    Serial.print(percentageHumidity);
     Serial.println("%");
-    return porcentajeHumedad;
+    return percentageHumidity;
 }
 
 // Determinar el estado según la humedad
